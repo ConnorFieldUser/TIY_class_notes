@@ -1,4 +1,8 @@
 
+my_string = "peanut is awesome"
+my_string = my_string.split(' ')
+print(my_string)
+
 my_list = ["connor", 33, ["the dark", "wasps"]]
 
 print(my_list)
@@ -21,7 +25,6 @@ my_dictionary = {
 
 print(my_dictionary["name"])
 print(my_dictionary["another"])
-
 print(my_dictionary.keys())
 
 # print(help(help))
