@@ -1,38 +1,47 @@
 
-# L = [4, 1, 11, 13]
-#
-# ages = []
-#
-# # for person in l:
-# #     petyears = person * 7
-# #     ages.append(petyears)
-# # print(ages)
-#
-# # ages = [person * 7 for person in L]
-#
-# ages = [person * 7 for person in L if person < 10]
-# print (ages)
+L = [4, 1, 11, 13]
 
-# list_of_numbers = [9, 10, 5, 100, 23, 2]
+ages = []
 
-# half_values = []
+for person in L:
+    petyears = person * 7
+    ages.append(petyears)
+print(ages)
 
-# for number in list_of_numbers:
-#     half_of_numbers = number // 2
-#     half_values.append(half_of_numbers)
-#
-# print(half_values)
-#
-# half_values = [number // 2 for number in list_of_numbers]
-# print(half_values)
+ages = [person * 7 for person in L]
+
+ages = [person * 7 for person in L if person < 10]
+print (ages)
+
+
+################################################################
+
+list_of_numbers = [9, 10, 5, 100, 23, 2]
+
+half_values = []
+
+for number in list_of_numbers:
+    half_of_numbers = number // 2
+    half_values.append(half_of_numbers)
+
+print(half_values)
+
+###############################################
+
+half_values = [number // 2 for number in list_of_numbers]
+print(half_values)
+
+###########################################################
 
 list_of_numbers = [100, 67, 23, 45, 11]
 
-# square_numbers = {}
-#
-# for number in list_of_numbers:
-#     square_numbers[number] = number ** 2
-#
+square_numbers = {}
+
+for number in list_of_numbers:
+    square_numbers[number] = number ** 2
+
+##############################################################
+
 
 square_numbers = {number: number ** 2
                   for number in list_of_numbers}
