@@ -47,7 +47,7 @@ def test_can_notify_if_nike_has_not_won():
     nike = Nike(1)
     footrace.add_nike(nike)
     footrace.tick()
-    assert footrace.has_won() == False
+    assert footrace.has_won() is False
 
 
 def test_can_notify_if_nike_has_won():
@@ -58,7 +58,7 @@ def test_can_notify_if_nike_has_won():
     footrace.tick()
     footrace.tick()
     footrace.tick()
-    assert footrace.has_won() == True
+    assert footrace.has_won() is True
 
 
 def will_tell_you_who_won():

@@ -21,6 +21,12 @@ class Weapon:
             self.damage = 0
 
 
+# class Warrior:
+
+#     __
+#     self.weapon = Sword()
+
+
 class Sword(Weapon):
 
     def __init__(self):
@@ -32,7 +38,6 @@ class UnbreakableSword (Sword):
 
     def set_durabiliity(self):
         pass
-
 
 orc = Monster()
 bad_sword = Weapon()
