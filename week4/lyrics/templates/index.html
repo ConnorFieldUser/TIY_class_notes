@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Second Title</title>
+  </head>
+  <body>
+    <h1>Welcome to Jango</h1>
+    I love web programming! ALLCAPS
+    <h2>{{ my_name }}</h2>
+    <h3>{{ now }}</h3>
+    <p>
+      {{ all_songs }}
+      {%for row in all_songs%}
+      <p>
+        <a href="/lyrics/">{{ row }}</a>
+      </p>
+
+      {% endfor %}
+    </p>
+  </body>
+</html>
