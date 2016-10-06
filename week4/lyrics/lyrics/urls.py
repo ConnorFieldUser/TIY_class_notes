@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from record_store.views import index_view
+from record_store.views import index_view, lyrics_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index_view)
+    url(r'^$', index_view),
+    url(r'^lyrics/(?P<song_id>\d+)/$', lyrics_view)
 ]

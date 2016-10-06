@@ -13,7 +13,7 @@
       {{ all_songs }}
       {%for row in all_songs%}
       <p>
-        <a href="/lyrics/">{{ row }}</a>
+        <a href="/lyrics/{{ row.id  }}">{{ row }}</a>
       </p>
 
       {% endfor %}
