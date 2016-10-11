@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CHIRPER DAY 2</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" media="screen" title="no title">
+    <style media="screen">
+      body {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <a href="{% url 'index_view' %}">My Home</a>
+        <a href="{% url 'about_view' %}">About Me</a>
+          <a href="#">Hashtag</a>
+        {% block content %}
+        {% endblock %}
+      </div>
+
+  </body>
+</html>
