@@ -20,10 +20,9 @@ def index_view(request):
 def about_view(request):
     print("goodbye_world")
     message = request.GET("message", "")
-    voice = request.GET("message", "")
     if message:
-        print("{}{}".format(message, voice))
-        print(request.GET)
+        print(message, )
+        print(request.POST)
     context = {
     }
     return render(request, 'about.html', context)
