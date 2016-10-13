@@ -15,6 +15,7 @@
       <div class="container">
         <a href="{% url 'index_view' %}">My Home</a>
         <a href="{% url 'about_view' %}">About Me</a>
+      <a href="{ url 'chirp_create_view'}">Create Chirp Page</a>
         {% if not request.user.is_authenticated %}
           <a href="{% url 'login' %}">login</a>
           {% else %}

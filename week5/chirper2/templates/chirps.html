@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for chirp in all_chirps %}
+{% for chirp in object_list %}
 <div class="panel panel-default">
   <div class="panel-body">
-    Basic panel example
+    <a href="{% url 'chirp_detail_view' chirp.id %}"> {{ chirp.body }}</a>
+
   </div>
 </div>
 {% endfor %}
