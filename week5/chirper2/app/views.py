@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from django.views import View
 
 from app.models import Chirp
 from app.forms import ChirpForm
 
-# Create your views here.
 
+# Create your views here.
 
 def index_view(request):
     print(request.POST)
@@ -28,3 +29,9 @@ def about_view(request):
     context = {
     }
     return render(request, 'about.html', context)
+
+
+class ChirpView(View):
+
+    def get(self, request):
+        return render(request, "chirps.html")
