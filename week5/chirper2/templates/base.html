@@ -21,6 +21,8 @@
           {% else %}
           <a href="{% url 'logout' %}?next={% url 'login' %}">logout</a>
           {% endif %}
+
+
         {% block content %}
         {% endblock %}
       </div>
