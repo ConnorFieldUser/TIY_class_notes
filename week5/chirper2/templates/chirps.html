@@ -2,15 +2,31 @@
 
 {% block content %}
 {% for chirp in object_list %}
-<div class="panel panel-default">
+  <div class="panel panel-default">
   <div class="panel-body">
     <a href="{% url 'chirp_detail_view' chirp.id %}"> {{ chirp.body }}</a>
+    <p style="color: orange">
+      {{ chirp.user }}
+    </p>
 
-<p style="color: orange">
-  {{ chirp.user }}
-</p>
+    <p>
+      <form class="" action="{% url 'chirp_upvote_view' chirp.id %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="value" value="1">
+        <input type="submit" name="" value="+">
+      </form>
+    </p>
+
+    <p>
+      <form class="" action="{% url 'chirp_downvote_view' chirp.id %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="value" value=false>
+        <input type="submit" name="" value="-">
+      </form>
+    </p>
 
   </div>
-</div>
+  </div>
+
 {% endfor %}
 {% endblock %}
