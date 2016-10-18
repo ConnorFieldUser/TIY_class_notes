@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from app.views import about_view, ChirpView, ChirpDetailView, ChirpCreateView, \
-                      ChirpUpdateView, UserCreateView, ChirpVoteView
+from app.views import about_view, \
+                      UserCreateView, \
+                      ChirpView, \
+                      ChirpDetailView, \
+                      ChirpCreateView, \
+                      ChirpUpdateView, \
+                      ChirpVoteView \
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
