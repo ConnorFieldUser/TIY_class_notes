@@ -1,33 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="row">
+  <div class="col-md-8">
+
 {% for chirp in object_list %}
   <div class="panel panel-default">
+    <div class="panel-heading">
+  <h3 class="panel-title">{{ chirp.score }}</h3>
+</div>
   <div class="panel-body">
     <a href="{% url 'chirp_detail_view' chirp.id %}"> {{ chirp.body }}</a>
     <p style="color: orange">
-      {{ chirp.user }}
+      By: {{ chirp.user }}
       {{ chirp.score }}
     </p>
 
     <p>
+      <div class="btn-toolbar" role="toolbar">
       <form class="" action="{% url 'chirp_upvote_view' chirp.id %}" method="post">
         {% csrf_token %}
         <input type="hidden" name="value" value="1">
-        <input type="submit" name="" value="+">
+        <input type="submit" name="" value="+" class="btn btn-group btn-success btn-sm">
       </form>
     </p>
 
     <p>
-      <form class="" action="{% url 'chirp_downvote_view' chirp.id %}" method="post">
+      <form class="btn-toolbar" action="{% url 'chirp_downvote_view' chirp.id %}" method="post">
         {% csrf_token %}
         <input type="hidden" name="value" value=false>
-        <input type="submit" name="" value="-">
+        <input type="submit" name="" value="-" class="btn btn-group btn-danger btn-sm">
       </form>
     </p>
+    </div
 
   </div>
   </div>
 
 {% endfor %}
+</div>
+</div>
+
 {% endblock %}
