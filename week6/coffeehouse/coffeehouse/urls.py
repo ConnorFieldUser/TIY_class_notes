@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from menu_app.views import IndexView, ProfileView, SpecialUpdateView, SpecialDeleteView
+from menu_app.views import IndexView, ProfileUpdateView, SpecialUpdateView, SpecialDeleteView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^$', IndexView.as_view(), name="index_view"),
     url(r'^special/(?P<pk>\d+)/update/$', SpecialUpdateView.as_view(), name="special_update_view"),
     url(r'^special/(?P<pk>\d+)/delete/$', SpecialDeleteView.as_view(), name="special_delete_view"),
-    url(r'accounts/profile/$', ProfileView.as_view(), name="profile_view")
+    url(r'accounts/profile/$', ProfileUpdateView.as_view(), name="profile_view")
 ]
