@@ -7,7 +7,7 @@ from menu_api.serializers import SpecialSerializer
 # Create your views here.
 
 
-class SpecailListAPIView(ListCreateAPIView):
+class SpecialListAPIView(ListCreateAPIView):
     queryset = Special.objects.all()
     serializer_class = SpecialSerializer
 
