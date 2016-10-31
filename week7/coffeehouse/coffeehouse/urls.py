@@ -16,7 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from menu_api.views import SpecialListCreateAPIView, SpecialDetailUpdateDestroyAPIView, IngredientListAPIView, IngredientDetailUpdateDestroyAPIView
+from menu_api.views import SpecialListCreateAPIView, SpecialDetailUpdateDestroyAPIView, IngredientListAPIView, \
+                           IngredientDetailUpdateDestroyAPIView
 
 from rest_framework.authtoken.views import obtain_auth_token
 
