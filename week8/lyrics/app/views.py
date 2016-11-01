@@ -15,7 +15,7 @@ class SongView(TemplateView):
         context = super().get_context_data()
         page = requests.get("http://metrolyrics.com/" + song_url)
         souper = BeautifulSoup(page.text, "html.parser")
-        context["song_lyrics"] = souper.find(id="lyrics-body-text")
+        context["song_lyrics"] = souper.find_all(id="lyrics-body-text")
         return context
 
 
