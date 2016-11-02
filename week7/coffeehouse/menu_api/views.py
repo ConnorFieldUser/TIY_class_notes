@@ -13,8 +13,6 @@ class SpecialListCreateAPIView(ListCreateAPIView):
     serializer_class = SpecialSerializer
 
     def perform_create(self, serializer):
-        # print(serializer)
-        # print(serializer.data)
         serializer.save(created_by=self.request.user)
         return super().perform_create(serializer)
 
