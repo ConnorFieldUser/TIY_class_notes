@@ -3,6 +3,10 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse_lazy
 
+from rest_framework.generics import ListAPIView
+
+from menu.serializers import SpecialSerializer
+
 from menu.models import Special
 
 # Create your views here.
@@ -27,3 +31,8 @@ class SpecialUpdateView(UpdateView):
     model = Special
     fields = ('title', 'description', 'picture')
     success_url = "/"
+
+
+class SpecialListAPIView(ListAPIView):
+    queryset = Special.objects.all()
+    serializer_class = SpecialSerializer
