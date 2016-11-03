@@ -3,10 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Cofeehouse</title>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+
+console.log($);
+$.getJSON('/api/specials/', function(result)); {
+    console.log("IM BACK FROM THE SERVER")
+});
+
+</script>
+
   </head>
   <body>
     <a href="{% url 'special_create_view' %}">create_new_special</a>
     {% block content %}
     {% endblock %}
+
+<script type="text/javascript">
+
+</script>
+
   </body>
 </html>

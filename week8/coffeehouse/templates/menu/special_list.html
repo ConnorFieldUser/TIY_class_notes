@@ -3,21 +3,6 @@
 <h1>Current Spcials</h1>
 
 {% for special in object_list %}
-<hr>
 
-<div class=>
-  <a href="{% url 'special_update_view' special.id %}">
-<img src="{{ MEDIA_URL }}{{ special.image_url }}" alt="Picture of {{ special.title }}"/>
-</a>
-</div>
-
-
-<div class="">
-  {{ special.title }}
-</div>
-<div class="">
-  {{ special.description }}
-</div>
-<hr>
 {% endfor %}
 {% endblock %}
